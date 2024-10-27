@@ -33,49 +33,41 @@ Copier le code
 
     <section class="calendar">
         <h2>Calendrier de Suivi</h2>
-        <div class="month">
-            <div class="week">
-                <div class="day" onclick="openChecklist(1)">1</div>
-                <div class="day" onclick="openChecklist(2)">2</div>
-                <div class="day" onclick="openChecklist(3)">3</div>
-                <div class="day" onclick="openChecklist(4)">4</div>
-                <div class="day" onclick="openChecklist(5)">5</div>
-                <div class="day" onclick="openChecklist(6)">6</div>
-                <div class="day" onclick="openChecklist(7)">7</div>
+            <div class="month">
+            <!-- Ajout des jours dans un conteneur en grille -->
+            <div class="days-grid">
+                <a class="day" href="?day=1">1</a>
+                <a class="day" href="?day=2">2</a>
+                <a class="day" href="?day=3">3</a>
+                <a class="day" href="?day=4">4</a>
+                <a class="day" href="?day=5">5</a>
+                <a class="day" href="?day=6">6</a>
+                <a class="day" href="?day=7">7</a>
+                <a class="day" href="?day=8">8</a>
+                <a class="day" href="?day=9">9</a>
+                <a class="day" href="?day=10">10</a>
+                <a class="day" href="?day=11">11</a>
+                <a class="day" href="?day=12">12</a>
+                <a class="day" href="?day=13">13</a>
+                <a class="day" href="?day=14">14</a>
+                <a class="day" href="?day=15">15</a>
+                <a class="day" href="?day=16">16</a>
+                <a class="day" href="?day=17">17</a>
+                <a class="day" href="?day=18">18</a>
+                <a class="day" href="?day=19">19</a>
+                <a class="day" href="?day=20">20</a>
+                <a class="day" href="?day=21">21</a>
+                <a class="day" href="?day=22">22</a>
+                <a class="day" href="?day=23">23</a>
+                <a class="day" href="?day=24">24</a>
+                <a class="day" href="?day=25">25</a>
+                <a class="day" href="?day=26">26</a>
+                <a class="day" href="?day=27">27</a>
+                <a class="day" href="?day=28">28</a>
+                <a class="day" href="?day=29">29</a>
+                <a class="day" href="?day=30">30</a>
+                <a class="day" href="?day=31">31</a>
             </div>
-            <div class="week">
-                 <div class="day" onclick="openChecklist(1)">8</div>
-                <div class="day" onclick="openChecklist(2)">9</div>
-                <div class="day" onclick="openChecklist(3)">10</div>
-                <div class="day" onclick="openChecklist(4)">11</div>
-                <div class="day" onclick="openChecklist(5)">12</div>
-                <div class="day" onclick="openChecklist(6)">13</div>
-                <div class="day" onclick="openChecklist(7)">14</div>
-            </div>
-            <div class="week">
-                 <div class="day" onclick="openChecklist(1)">15</div>
-                <div class="day" onclick="openChecklist(2)">16</div>
-                <div class="day" onclick="openChecklist(3)">17</div>
-                <div class="day" onclick="openChecklist(4)">18</div>
-                <div class="day" onclick="openChecklist(5)">19</div>
-                <div class="day" onclick="openChecklist(6)">20</div>
-                <div class="day" onclick="openChecklist(7)">21</div>
-            </div>
-            <div class="week">
-                 <div class="day" onclick="openChecklist(1)">22</div>
-                <div class="day" onclick="openChecklist(2)">23</div>
-                <div class="day" onclick="openChecklist(3)">24</div>
-                <div class="day" onclick="openChecklist(4)">25</div>
-                <div class="day" onclick="openChecklist(5)">26</div>
-                <div class="day" onclick="openChecklist(6)">27</div>
-                <div class="day" onclick="openChecklist(7)">28</div>
-            </div>
-            <div class="week">
-                <div class="day" onclick="openChecklist(5)">29</div>
-                <div class="day" onclick="openChecklist(6)">30</div>
-                <div class="day" onclick="openChecklist(7)">31</div>
-            </div>
-            <!-- Répéter pour toutes les semaines du mois -->
         </div>
     </section>
 
@@ -93,7 +85,11 @@ Copier le code
     </section>
 
     <script>
-        function openChecklist(day) {
+        // Obtenir le jour à partir de l'URL
+        const params = new URLSearchParams(window.location.search);
+        const day = params.get('day');
+        
+        if (day) {
             document.getElementById("checklist").classList.remove("hidden");
             document.getElementById("selectedDay").innerText = day;
         }
