@@ -179,51 +179,29 @@ document.getElementById('signup-form').addEventListener('submit', function(event
         document.getElementById('signup-form').reset();
     }
 });
-document.addEventListener('DOMContentLoaded', function() {
-    let currentDay = 1;
 
-    const calendarEl = document.getElementById('calendar');
-    const calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        events: generateEvents(),
-        eventClick: function(info) {
-            // GÃ©rer les actions lorsque tu cliques sur un jour spÃ©cifique
-            alert('Jour ' + info.event.title);
-        }
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    const monthElement = document.getElementById('month');
+    const yearElement = document.getElementById('year');
+    const taskList = document.getElementById('taskList');
 
-    calendar.render();
+    const today = new Date();
+    const month = today.getMonth();
+    const year = today.getFullYear();
 
-    document.getElementById('next-day-btn').addEventListener('click', () => {
-        if (currentDay < 31) {
-            currentDay++;
-            document.getElementById('day-number').textContent = currentDay;
-            resetCheckboxes();
-        }
-    });
+    monthElement.textContent = today.toLocaleString('default', { month: 'long' });
+    yearElement.textContent = year;
 
-    function resetCheckboxes() {
-        let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-            checkbox.checked = false;
+    const days = document.querySelectorAll('.day');
+    days.forEach(day => {
+        day.addEventListener('click', () => {
+            if (!day.classList.contains('completed')) {
+                day.classList.add('completed');
+                const li = document.createElement('li');
+                li.textContent = `Task completed on ${day.textContent} ${monthElement.textContent} ${year}`;
+                taskList.appendChild(li);
+            }
         });
-    }
-
-    // GÃ©nÃ©rer des Ã©vÃ©nements pour les 31 jours
-    function generateEvents() {
-        const events = [];
-        const startDate = new Date();
-
-        for (let i = 0; i < 31; i++) {
-            let eventDate = new Date(startDate);
-            eventDate.setDate(startDate.getDate() + i);
-            events.push({
-                title: 'Jour ' + (i + 1),
-                start: eventDate.toISOString().split('T')[0],
-                allDay: true
-            });
-        }
-
-        return events;
-    }
+    });
 });
+
