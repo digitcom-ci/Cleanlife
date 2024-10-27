@@ -406,7 +406,7 @@ h1, h2 {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 10px;
-    width: 100%;
+    width: 50%;
 }
 
 .day {
