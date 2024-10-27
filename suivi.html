@@ -10,48 +10,62 @@
     
     <header>
             <div class="calendar">
-                <div class="header">
-                    <span class="month" id="month"></span>
-                    <span class="year" id="year"></span>
-                </div>
-                <div class="days">
-                    <div class="day" id="day1">1</div>
-                    <div class="day" id="day2">2</div>
-                    <div class="day" id="day3">3</div>
-                    <div class="day" id="day4">4</div>
-                    <div class="day" id="day5">5</div>
-                    <div class="day" id="day6">6</div>
-                    <div class="day" id="day7">7</div>
-                    <div class="day" id="day8">8</div>
-                    <div class="day" id="day9">9</div>
-                    <div class="day" id="day10">10</div>
-                    <div class="day" id="day11">11</div>
-                    <div class="day" id="day12">12</div>
-                    <div class="day" id="day13">13</div>
-                    <div class="day" id="day14">14</div>
-                    <div class="day" id="day15">15</div>
-                    <div class="day" id="day16">16</div>
-                    <div class="day" id="day17">17</div>
-                    <div class="day" id="day18">18</div>
-                    <div class="day" id="day19">19</div>
-                    <div class="day" id="day20">20</div>
-                    <div class="day" id="day21">21</div>
-                    <div class="day" id="day22">22</div>
-                    <div class="day" id="day23">23</div>
-                    <div class="day" id="day24">24</div>
-                    <div class="day" id="day25">25</div>
-                    <div class="day" id="day26">26</div>
-                    <div class="day" id="day27">27</div>
-                    <div class="day" id="day28">28</div>
-                    <div class="day" id="day29">29</div>
-                    <div class="day" id="day30">30</div>
-                    <div class="day" id="day31">31</div>
-                </div>
+                
+Voici un exemple de code HTML et CSS pour une page de suivi de progression avec un calendrier interactif. Lorsqu'on clique sur un jour, on accède à la check-list des tâches accomplies pour ce jour.
+
+HTML (index.html)
+html
+Copier le code
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi de Progression - Glow Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Suivi de Progression</h1>
+        <p>31 jours pour ton Glow Up physique et mental !</p>
+    </header>
+
+    <section class="calendar">
+        <h2>Calendrier de Suivi</h2>
+        <div class="month">
+            <div class="week">
+                <div class="day" onclick="openChecklist(1)">1</div>
+                <div class="day" onclick="openChecklist(2)">2</div>
+                <div class="day" onclick="openChecklist(3)">3</div>
+                <div class="day" onclick="openChecklist(4)">4</div>
+                <div class="day" onclick="openChecklist(5)">5</div>
+                <div class="day" onclick="openChecklist(6)">6</div>
+                <div class="day" onclick="openChecklist(7)">7</div>
             </div>
-            <div class="task-list">
-                <h2>Tasks Completed</h2>
-                <ul id="taskList"></ul>
-            </div>
+            <!-- Répéter pour toutes les semaines du mois -->
+        </div>
+    </section>
+
+    <section id="checklist" class="checklist hidden">
+        <h2>Check-list du Jour <span id="selectedDay"></span></h2>
+        <ul>
+            <li><input type="checkbox"> Douche du matin</li>
+            <li><input type="checkbox"> Brosser les dents</li>
+            <li><input type="checkbox"> Gua Sha</li>
+            <li><input type="checkbox"> Séance de Pilates</li>
+            <li><input type="checkbox"> Travail sur projets</li>
+            <li><input type="checkbox"> Revue des tâches (To-Do)</li>
+            <li><input type="checkbox"> Douche du soir</li>
+        </ul>
+    </section>
+
+    <script>
+        function openChecklist(day) {
+            document.getElementById("checklist").classList.remove("hidden");
+            document.getElementById("selectedDay").innerText = day;
+        }
+    </script>
           
     <script src="script.js"></script>
     <footer>
