@@ -424,7 +424,7 @@ h1, h2 {
     border-radius: 5px;
     height: auto; /* Maintient le ratio de l'image */
     border-radius: 10px; /* Arrondit les coins de l'image */
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .day:hover {
