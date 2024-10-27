@@ -369,4 +369,51 @@ input {
 .btn:hover {
     background-color: #ff6f91; /* Couleur de fond au survol */
 }
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+h1, h2 {
+    text-align: center;
+}
+
+.calendar {
+    margin: 20px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.day {
+    background: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.day:hover {
+    background: #d0f0c0;
+}
+
+.completed {
+    background: #a0e0a0;
+}
