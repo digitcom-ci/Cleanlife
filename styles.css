@@ -405,7 +405,7 @@ h1, h2 {
 .days-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-gap: 10px;
+    grid-gap: 0;
     width: 100%;
     max-width: 600px;  /* Limiter la taille maximale pour qu'il entre dans le cadre */
     margin: auto;      /* Centrer le bloc */
