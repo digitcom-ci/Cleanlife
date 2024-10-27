@@ -405,17 +405,15 @@ h1, h2 {
 .days-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-gap: 0;
+    grid-gap: 10px;
     width: 100%;
     max-width: 600px;  /* Limiter la taille maximale pour qu'il entre dans le cadre */
     margin: auto;      /* Centrer le bloc */
-    height: auto; /* Maintient le ratio de l'image */
-    border-radius: 10px; /* Arrondit les coins de l'image */
-    margin-bottom: 20px;
+   
 }
 
 .day {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     background-color: #f0f0f0;
     border: 1px solid #ddd;
@@ -424,6 +422,9 @@ h1, h2 {
     text-decoration: none;
     color: #333;
     border-radius: 5px;
+    height: auto; /* Maintient le ratio de l'image */
+    border-radius: 10px; /* Arrondit les coins de l'image */
+    margin-bottom: 20px;
 }
 
 .day:hover {
