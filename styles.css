@@ -398,23 +398,27 @@ h1, h2 {
 
 .month {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
-.week {
-    display: flex;
-    justify-content: space-between;
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
     width: 100%;
 }
 
 .day {
-    width: 13%;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     background-color: #f0f0f0;
     border: 1px solid #ddd;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
 }
 
 .day:hover {
