@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi Glow Up - Connexion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="arrow-back">
+            <a href="index.html"> <!-- Remplacez par la page de retour souhaitée -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.3 1.5a.5.5 0 0 1 .4.8l-7 7 7 7a.5.5 0 1 1-.8.6l-7.5-7.5a.5.5 0 0 1 0-.7l7.5-7.5a.5.5 0 0 1 .4-.1z"/>
+                </svg>
+            </a>
+        </div>
+        <nav class="hidden">
+        <h1>Blog Clean Girl</h1>
+        <!-- Menu Hamburger -->
+        <div class="menu-container">
+          <div class="hamburger" id="hamburger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+          </div>
+          <nav class="navbar" id="navbar">
+              <ul>
+                  <<li><<a href="index.html"></a>Page d'accueil</li>
+                  <li><a href="suivi.html">Suivi des Progrès</a></li>
+                  <li><a href="routine.html">Ma Routine</a></li>
+                  <li><a href="conseils.html">Conseils</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+
+              </ul>
+          </nav>
+        </div>
+    </header>
+
+    <section class="auth-section">
+
+        <div class="form-container">
+            <h3> Un nouveau départ commence ici ! Crée ton compte et commence ton voyage vers la meilleure version de toi-même.</h3>
+            <h2>Inscription</h2>
+        <form id="signup-form">
+            <label for="name">Nom complet :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirme ton mot de passe :</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <p id="error-message" class="error-message"></p>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
