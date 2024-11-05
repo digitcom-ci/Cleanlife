@@ -61,9 +61,26 @@
         function welcomeMessage() {
             console.log("Bienvenue sur notre site Clean Girl !");
         }
+        
+        // Fonction pour créer une notification de rappel
+function sendRoutineReminder() {
+    if (Notification.permission === "granted") {
+        new Notification("N'oubliez pas votre routine du jour !");
+    } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then(permission => {
+            if (permission === "granted") {
+                new Notification("N'oubliez pas votre routine du jour !");
+            }
+        });
+    }
+}
+
+// Exemple d'appel pour déclencher le rappel toutes les 24 heures
+setInterval(sendRoutineReminder, 24 * 60 * 60 * 1000); // 24 heures en millisecondes
 
         // Appeler la fonction de message de bienvenue au chargement de la page
         window.onload = welcomeMessage;
+        
 
     </script>
     
