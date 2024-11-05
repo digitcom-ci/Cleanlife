@@ -140,6 +140,15 @@ footer {
   width: 100%;
 }
 
+.intro {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+  
 .routine {
   padding: 10px;
   text-align: center;
