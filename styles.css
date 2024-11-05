@@ -18,7 +18,7 @@ header {
   margin-right: 30px; /* Ajoute un espace à droite de la barre de navigation */
   }
   
-  .header-container {
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,6 +60,13 @@ nav {
   box-shadow: 0px 4px 8px #ff86D0 rgba(0, 0, 0, 0.1);
   z-index: 10;
   min-width: 150px; /* Largeur minimum pour le sous-menu */
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-left: auto; /* Assure que le menu est aligné à droite */
 }
     
 .nav-menu a {
@@ -248,6 +255,10 @@ footer {
 
     .hamburger {
         display: block;
+    }
+    
+    .nav-menu ul {
+        margin-left: 0; /* Reset margin for mobile */
     }
 }
 
