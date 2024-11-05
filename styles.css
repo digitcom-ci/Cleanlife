@@ -221,21 +221,26 @@ footer {
 }
 
 /* Responsive Design */
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .nav-menu {
-      flex-direction: column;
-      display: none; /* Masquer le menu sur les petits écrans */
-      width: 100%;
-      background-color: #f8f9fa;
-  }
+    .nav-menu ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #f8f8f8;
+        width: 200px;
+        display: none;
+    }
 
-  .nav-menu.active {
-      display: flex; /* Affiche le menu lorsque la classe active est ajoutée */
-  }
+    .nav-menu.active ul {
+        display: flex;
+    }
 
-  .hamburger {
-      display: block; /* Affiche l'icône hamburger sur les petits écrans */
-  }
+    .hamburger {
+        display: block;
+    }
 }
 
 .date-selector select {
