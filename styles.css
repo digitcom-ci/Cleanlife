@@ -17,6 +17,13 @@ header {
   z-index: 1000; /* Assure que la barre est au-dessus des autres éléments */
   margin-right: 30px; /* Ajoute un espace à droite de la barre de navigation */
   }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
 
 .logo {
   font-size: 30px;
