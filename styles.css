@@ -7,130 +7,111 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between; /* Espacer le logo à gauche et le menu à droite */
+  justify-content: space-between;
   align-items: center;
-  background-color: #ff86D0;
-  padding: 10px 0;
-  position: fixed; /* Fixe la barre de navigation */
-  top: 0; /* Place la barre en haut de la page */
-  width: 100%; /* Prend toute la largeur de la page */
-  z-index: 1000; /* Assure que la barre est au-dessus des autres éléments */
-  margin-right: 30px; /* Ajoute un espace à droite de la barre de navigation */
-  }
+  background-color: #ff86d0;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
 .logo {
   font-size: 30px;
   font-weight: bold;
   color: #fff;
-  margin-left: 20px; /* Ajoute un espace à gauche du logo */
+  margin-left: 20px;
 }
 
 .hamburger {
   font-size: 30px;
   cursor: pointer;
-  display: none; /* Masquer sur les écrans larges */
+  display: none;
   color: #fff;
-  margin-right: 10px; /* Ajoute un espace à droite du bouton hamburger */
+  margin-right: 10px;
 }
-
-nav {
-  position: relative;
-  }
 
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
 }
 
-
 .nav-menu ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin-left: auto; /* Assure que le menu est aligné à droite */
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-left: auto;
 }
 
 .nav-menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    padding: 8px 12px;
-    transition: background-color 0.3s;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
 }
 
 .nav-menu ul li a:hover {
-    background-color: #ddd;
-    border-radius: 4px;
+  background-color: #ddd;
+  border-radius: 4px;
 }
-
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .nav-menu ul {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #f8f8f8;
-        width: 200px;
-        display: none;
-    }
+  .nav-menu ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f8f8f8;
+    width: 200px;
+    display: none;
+  }
 
-    .nav-menu.active ul {
-        display: flex;
-    }
+  .nav-menu.active ul {
+    display: flex;
+  }
 
-    .hamburger {
-        display: block;
-    }
+  .hamburger {
+    display: block;
+  }
 
-    .nav-menu ul {
-        margin-left: 0; /* Reset margin for mobile */
-    }
+  .nav-menu ul {
+    margin-left: 0;
+  }
 }
 
 main {
   padding: 20px;
   text-align: center;
-  margin-top: 30px; /* Espace le contenu de la barre de navigation */
-  margin-bottom: 30px; /* Espace le contenu de la barre de navigation */
-}
-
-.intro {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  margin-bottom: 50px;
+  margin-top: 80px;
 }
 
 h1 {
-  color: #ff86D0;;
-  font-size: 30px; /* Taille du texte */
-  text-align: center; /* Centrer le titre */
-  margin-bottom: 20px; /* Espace en bas */
-  text-shadow: 2px 2px 5px #fff; /* Ombre portée */;
-  margin-top: 10px; /* Espace en haut */
-  }
+  color: #ff86d0;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px #fff;
+  margin-top: 10px;
+}
 
 img {
-  width: 100%; /* Ajuster la largeur à 100% du conteneur */
-      max-width: 600px; /* Limiter la largeur à 600px */
-      height: auto; /* Garder les proportions */
-      display: block; /* Faire de l'image un élément block */
-      margin: 20px auto; /* Centrer l'image horizontalement avec une marge en haut et en bas */
-      border-radius: 10px; /* Arrondir les coins de l'image */
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ajouter une ombre à l'image */
-      margin-top: 5px; /* Espace en haut */
-  }
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
 
 .cta-button {
-  background-color: #ff86D0;
+  background-color: #ff86d0;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -147,30 +128,28 @@ img {
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #ff86d0;;
+  background-color: #ff86d0;
   color: white;
   position: fixed;
   bottom: 0;
   width: 100%;
-  
 }
 
 .routine {
   padding: 10px;
   text-align: center;
   margin-bottom: 50px;
-  
 }
 
 .routine strong {
   font-size: 18px;
-  }
+}
 
 .routine p {
   font-size: 15px;
   margin-top: 0;
   text-align: left;
-  }
+}
 
 .routine-section {
   margin: 20px 0;
@@ -197,7 +176,7 @@ footer {
 
 .sticker {
   margin-left: 10px;
-  font-size: 20px; /* Adjust the size as needed */
+  font-size: 20px;
 }
 
 .add-routine {
@@ -212,7 +191,7 @@ footer {
 .add-routine button {
   padding: 10px 20px;
   margin-left: 10px;
-  background-color: #ff86d0;;
+  background-color: #ff86d0;
   color: white;
   border: none;
   cursor: pointer;
@@ -228,22 +207,20 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   .routine-section {
-      margin: 10px;
+    margin: 10px;
   }
 
   .add-routine input {
-      width: 80%;
-      margin-bottom: 10px;
+    width: 80%;
+    margin-bottom: 10px;
   }
 
   .add-routine {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
-
-
 
 .date-selector select {
   padding: 5px;
@@ -252,8 +229,7 @@ footer {
   border-radius: 5px;
   border: 1px solid #ff86d0;
   color: #ff86d0;
-  bacground-color: #fff;
-  
+  background-color: #fff;
 }
 
 .calendar {
@@ -281,7 +257,8 @@ footer {
   background-color: #831100;
 }
 
-.tracker, .notes-section {
+.tracker,
+.notes-section {
   margin-top: 20px;
 }
 
@@ -300,40 +277,41 @@ textarea {
 button {
   margin-top: 10px;
   padding: 10px;
-  background-color: #ff86d0;;
+  background-color: #ff86d0;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  
 }
 
 button:hover {
-  background-color: #99244f;;
+  background-color: #99244f;
 }
 
 .notes-section {
   margin-top: 20px;
   display: none;
 }
- .tracker {
-  display: none; /* Cacher par défaut */ 
+
+.tracker {
+  display: none;
 }
+
 .activities label {
   font-size: 15px;
   margin-top: 0;
   text-align: left;
-  }
+}
 
 .container {
   padding: 10px;
   text-align: center;
   margin-bottom: 50px;
-  }
+}
 
 .container h3 {
   color: #ff86d0;
-  }
+}
 
 #searchBar {
   margin-top: 10px;
@@ -351,28 +329,36 @@ button:hover {
 }
 
 .article {
+  background-color: #fff;
   padding: 10px;
-  text-align: center;
-  margin-bottom: 50px;
-  }
-
-.sarticle {
-  padding: 10px;
-  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   margin-bottom: 50px;
 }
 
-.sarticle h3 {
-  font-size: 25px;
+.article h2 {
   color: #ff86d0;
-  margin-bottom: 0;
-  margin-top: 0;
-  
-  }
+  font-size: 24px;
+}
 
-.sarticle ul {
-  text-align: left;
-  }
+.article p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.article-link {
+  background-color: #ff86d0;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 
 
 .sarticle strong {
@@ -401,27 +387,13 @@ button:hover {
   margin-bottom: 50px;
   }
 
-.article-link {
-background-color: #ff86D0; /* Couleur de fond du bouton */
-  color: white; /* Couleur du texte */
-  border: none; /* Pas de bordure */
-  padding: 10px 15px; /* Espacement intérieur */
-  text-align: center; /* Centrer le texte */
-  text-decoration: none; /* Pas de soulignement */
-  display: inline-block; /* Pour que le bouton fonctionne correctement */
-  margin: 5px 30px; /* Espacement autour du bouton */
-  cursor: pointer; /* Curseur en main au survol */
-  border-radius: 5px; /* Coins arrondis */
-}
-
 .read-more:hover {
   background-color: #99244f;
 }
 
-
 .arrow-back {
   display: inline-block;
-  margin-right: 20px; /* espace entre la flèche et le logo */
+  margin-right: 20px;
 }
 
 .arrow-back svg {
@@ -435,17 +407,8 @@ background-color: #ff86D0; /* Couleur de fond du bouton */
   margin-bottom: 50px;
 }
 
-
-.article { 
-background-color: #fff; 
-padding: 10px; 
-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-border-radius: 8px;
-}
-
 .récipient {
   padding: 10px;
   text-align: center;
   margin-bottom: 50px;
 }
-
