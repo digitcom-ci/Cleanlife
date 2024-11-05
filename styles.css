@@ -17,14 +17,6 @@ header {
   z-index: 1000; /* Assure que la barre est au-dessus des autres éléments */
   margin-right: 30px; /* Ajoute un espace à droite de la barre de navigation */
   }
-  
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    }
 
 .logo {
   font-size: 30px;
@@ -45,22 +37,14 @@ nav {
   position: relative;
   }
 
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  background-color: #FF86D0 !important; /* Couleur de fond rose pour le menu */
-  padding: 10px 20px;
-  border-radius: 5px; /* Coins arrondis pour un look plus doux */
-  position: absolute;
-  top: 45px; /* Positionne le menu sous le hamburger */
-  left: -150px;
-  width: 100%;
-  margin: 0;
-  box-shadow: 0px 4px 8px #ff86D0 rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  min-width: 150px; /* Largeur minimum pour le sous-menu */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
 }
+
 
 .nav-menu ul {
     display: flex;
@@ -68,20 +52,44 @@ nav {
     list-style: none;
     margin-left: auto; /* Assure que le menu est aligné à droite */
 }
-    
-.nav-menu a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
 }
 
-.nav-menu li {
-  position: relative;
+.nav-menu ul li a:hover {
+    background-color: #ddd;
+    border-radius: 4px;
 }
 
 
-.nav-menu li:hover .dropdown {
-  display: block;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #f8f8f8;
+        width: 200px;
+        display: none;
+    }
+
+    .nav-menu.active ul {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu ul {
+        margin-left: 0; /* Reset margin for mobile */
+    }
 }
 
 main {
@@ -235,32 +243,7 @@ footer {
   }
 }
 
-/* Responsive Design */
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-menu ul {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #f8f8f8;
-        width: 200px;
-        display: none;
-    }
-
-    .nav-menu.active ul {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-    
-    .nav-menu ul {
-        margin-left: 0; /* Reset margin for mobile */
-    }
-}
 
 .date-selector select {
   padding: 5px;
