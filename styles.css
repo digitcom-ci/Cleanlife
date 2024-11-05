@@ -40,6 +40,10 @@ header {
   margin: auto;
 }
 
+.nav {
+  position: relative;
+  }
+
 .nav-menu ul {
   display: flex;
   gap: 20px;
